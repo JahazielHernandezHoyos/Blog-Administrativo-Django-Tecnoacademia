@@ -25,7 +25,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('',PostListView.as_view(), name='list'),
     path('<slug>/',PostDetailView.as_view(), name='detail'),
-    path('',PostListView.as_view(), name='list'),
+    path('<slug>/update',PostListView.as_view(), name='list'),
     path('',PostListView.as_view(), name='list'),
     path('',PostListView.as_view(), name='list'),
 ]

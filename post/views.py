@@ -4,10 +4,10 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 class PostListView(ListView):
     model = Post
 
-class PostListDetailView(DetailView):
+class PostDetailView(DetailView):
     model = Post
 
-class PostListCreateView(CreateView):
+class PostCreateView(CreateView):
     model = Post
 
 class PostUpdateView(UpdateView):
