@@ -17,11 +17,17 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, include
+from post.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
+    path('',PostListView.as_view(), name='list'),
+    path('<slug>/',PostDetailView.as_view(), name='detail'),
+    path('',PostListView.as_view(), name='list'),
+    path('',PostListView.as_view(), name='list'),
+    path('',PostListView.as_view(), name='list'),
 ]
 
 if settings.DEBUG:
